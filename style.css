@@ -24,13 +24,17 @@ nav {
     justify-content: space-around;
     width: 100%;
 }
-:is(h1,h2,h3){
+h1 {
+    color: #000000;
+}
+:is(h1,h2,h3,a ){
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    text-decoration: none;
 }
-:is(p, a){
+:is(p){
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;

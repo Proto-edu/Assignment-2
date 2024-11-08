@@ -7,47 +7,117 @@ body {
     box-sizing: border-box;
     animation: fadeIn 2s ease-in-out;
     min-height: 100vh;
+    font-size: 1.2em; 
 }
 
 header {
     background-color: rgba(255, 255, 255, 0.684);
     color: #000000;
-    padding: 10px, 0;
+    padding: 10px 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-size: 1.5em; 
 }
+
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 100%;
+    padding: 0 20px; 
 }
+
 h1 {
     color: #000000;
+    font-size: 2em; 
 }
-:is(h1,h2,h3,a ){
+
+h2 {
+    text-align: center;
+    font-size: 1.75em; 
+}
+
+:is(h1, h2, h3, a) {
     font-family: "Merienda", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
     text-decoration: none;
 }
-:is(p){
+
+:is(p) {
     font-family: "Cormorant Garamond", serif;
     font-weight: 400;
     font-style: normal;
 }
+
 p {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-   transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    font-size: 1.2em; /* Increase the font size for paragraphs */
 }
+
 p:hover {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.grid-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.grid-item img {
+    margin-right: 10px;
+}
+
+.text-right {
+    text-align: right;
+    flex: 1;
+}
+
+img {
+    max-width: 50%;
+    height: auto;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+body::before {
+    content: "";
+    display: block;
+    height: 220px; 
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.684);
+    color: #000000;
+    padding: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
 }
